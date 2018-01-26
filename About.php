@@ -2,7 +2,7 @@
 
 class About {
 
-    protected $autore;
+    private $autore;
 
     public function __construct($autore) {
         $this->autore=$autore;
@@ -18,7 +18,8 @@ class About {
 class AboutTime extends About {
 
     function sviluppo(){
-        echo (new DateTime())->format('d-m-Y H:i:s').": "."Sviluppo software a cura di ".$this->autore;
+        echo (new DateTime())->format('d-m-Y H:i:s').": ";
+        echo parent::sviluppo();
     }
 }
 

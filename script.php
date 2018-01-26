@@ -10,7 +10,7 @@ $dayOfTheWeek = array(
 );
 
 function average($array){
-    $average;
+    $average = 0;
     foreach($array as $key => $value){
         $average = $average + $value/sizeof($array); 
     }
